@@ -17,6 +17,7 @@
 .service-item{
     background-color: rgb(80, 80, 80);
     border-radius: 24px;
+    min-height: 300px;
 }
 
 .service-head{
@@ -29,7 +30,8 @@
 
 .service-items {
     display: flex; /* Ensure it's a flex container */
-    gap: 10px; /* Adjust the gap size as needed */
+    flex-wrap: wrap;
+    gap: 25px; /* Adjust the gap size as needed */
   }
   
   .service-item {
@@ -71,4 +73,13 @@
 
 .service-item:hover{
     background-color: rgb(36, 169, 36);
+}
+
+.service-item-desc{
+    color: white;
+    text-align: justify;
+}
+
+.service-item-para{
+    font-size: 1.2rem;
 }
