@@ -1,38 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useSpring, motion } from 'framer-motion';
 import useMediaQuery from 'react-responsive';
 import Navbar from './Navbar/Navbar';
 import Hero from './Hero/Hero';
 import Services from './Services/Services';
 
+// Custom hook for debouncing
+const useDebounce = (callback, delay) => {
+  const timerRef = useRef();
+
+  const debouncedCallback = useCallback((...args) => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = setTimeout(() => {
+      callback(...args);
+    }, delay);
+  }, [callback, delay]);
+
+  return debouncedCallback;
+};
+
 export default function Body() {
-  const isLargeScreen = useMediaQuery({ query: '(min-width: 1024px)' });
 
   // Initialize spring values for the cursor position
   const cursorX = useSpring(0, { stiffness: 300, damping: 20 });
   const cursorY = useSpring(0, { stiffness: 300, damping: 20 });
 
-  // Update cursor position on mouse move
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      cursorX.set(event.clientX);
-      cursorY.set(event.clientY);
-    };
+  // Update cursor position on mouse move with debouncing
+  const handleMouseMove = useDebounce((event) => {
+    cursorX.set(event.clientX);
+    cursorY.set(event.clientY);
+  }, 10);
 
+  useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [cursorX, cursorY]);
+  }, [handleMouseMove]);
+
+  //large screen logic
+  const [largeScreen, setLargeScreen] = useState(window.innerWidth > 1000)
+
+
 
   return (
     <div>
-      {isLargeScreen && (
+      {largeScreen &&
         <motion.div
+          role="presentation" // Accessibility: This div is purely decorative
           style={{
             position: 'fixed',
-            top: -10,
-            left: -10,
+            top: 0, // Start at the top of the viewport
+            left: 0, // Start at the left of the viewport
             x: cursorX,
             y: cursorY,
             width: '40px',
@@ -41,9 +62,10 @@ export default function Body() {
             borderRadius: '50%',
             pointerEvents: 'none',
             zIndex: 1000,
+            transform: 'translate(-50%, -50%)', // Center the cursor on the mouse position
           }}
-        />
-      )}
+        />}
+
 
       <Navbar />
       <div className="px-5">
