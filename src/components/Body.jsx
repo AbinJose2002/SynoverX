@@ -43,17 +43,15 @@ export default function Body() {
   //large screen logic
   const [largeScreen, setLargeScreen] = useState(window.innerWidth > 1000)
 
-
-
   return (
     <div>
       {largeScreen &&
         <motion.div
-          role="presentation" // Accessibility: This div is purely decorative
+          role="presentation"
           style={{
             position: 'fixed',
-            top: 0, // Start at the top of the viewport
-            left: 0, // Start at the left of the viewport
+            top: -10,
+            left: -10,
             x: cursorX,
             y: cursorY,
             width: '40px',

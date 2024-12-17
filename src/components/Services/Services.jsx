@@ -7,8 +7,7 @@ import develop from '../../assets/develop.png';
 export default function Services() {
     const handleMouseEnter = (e) => {
         const logo = e.currentTarget.querySelector('.service-item-logo');
-        logo.style.backgroundColor = '#7a7c7c'; 
-        logo.style.border = "1px solid #fff"
+        logo.style.backgroundColor = '#4f672ac'
         const desc = e.currentTarget.querySelector('.service-item-desc');
         desc.style.color = 'black';
     }
@@ -36,7 +35,7 @@ export default function Services() {
                         <div className="service-item col-lg-4 col-sm-12" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                             <div className="service-item-logo"><img src={uiux} alt="ui/ux" /></div>
                             <div className="service-item-desc">
-                                <h3 className='pt-4 pb-1 service-item-head'>UI/ UX Designing</h3>
+                                <h3 className='pt-4 pb-1 service-item-head'>UI/ UX</h3>
                                 <p className="py-2 service-item-para">UI/ UX in app is key to creating a great user experience. This will increase user loyality, strengthen the brand image, and provide a competitive advantage.</p>
                             </div>
                         </div>
