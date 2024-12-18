@@ -4,6 +4,7 @@ import useMediaQuery from 'react-responsive';
 import Navbar from './Navbar/Navbar';
 import Hero from './Hero/Hero';
 import Services from './Services/Services';
+import About from './About/About';
 
 // Custom hook for debouncing
 const useDebounce = (callback, delay) => {
@@ -71,6 +72,7 @@ export default function Body() {
       </div>
       <div className="px-5">
         <Services />
+        <About />
       </div>
     </div>
   );

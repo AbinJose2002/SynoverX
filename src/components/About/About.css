@@ -1,0 +1,105 @@
+.about{
+    min-height: 60;
+}
+
+.about-btn{
+    border: 1px solid black;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 24px;
+}
+
+.about-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.group-img1, .group-img2{
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.group-img2{
+    width: 30%;
+    position: absolute;
+    right: 15%;
+    bottom: 10px;
+    border: 10px solid white;
+}
+
+.about-head{
+    font-size: 4rem;
+}
+
+.about-para{
+    font-size: 1.6rem;
+}
+
+.learn-more-link{
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1460px){
+    .group-img1, .group-img2{
+        width: 70%;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    .group-img2{
+        width: 50%;
+        position: absolute;
+        right: 5%;
+        bottom: 15%;
+        border: 10px solid white;
+    }
+
+    .about-right{
+        margin-top: 80px !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .group-img1, .group-img2{
+        width: 70%;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    .group-img2{
+        width: 50%;
+        position: absolute;
+        right: 15%;
+        bottom: -25%;
+        border: 10px solid white;
+    }
+
+    .about-right{
+        margin-top: 80px !important;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .group-img1, .group-img2{
+        width: 70%;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    .group-img2{
+        width: 50%;
+        position: absolute;
+        right: 15%;
+        bottom: -25%;
+        border: 10px solid white;
+    }
+
+    .about-right{
+        margin-top: 40px !important;
+    }
+}

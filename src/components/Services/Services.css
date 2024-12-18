@@ -8,7 +8,7 @@
 
 .service-btn{
     border: 1px solid white;
-    padding: 15px;
+    padding: 10px 15px;
     color: white;
     text-decoration: none;
     border-radius: 24px;
@@ -35,7 +35,7 @@
   }
   
   .service-item {
-    min-height: 450px;
+    min-height: 350px;
     padding: 30px;
     flex: 1; /* Allow items to grow and fill the available space */
   }
@@ -74,11 +74,6 @@
 @media only screen and (max-width: 470px) {
     .service-head{
         font-size: 2rem;
-        text-align: center;
-    }
-
-    .service-item-logo{
-        text-align: center;
     }
 
     .service-item{
