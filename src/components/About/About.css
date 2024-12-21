@@ -1,5 +1,7 @@
 .about{
-    min-height: 60;
+    min-height: 70vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .about-btn{
@@ -37,12 +39,32 @@
 
 .about-para{
     font-size: 1.6rem;
+    text-align: justify;
 }
 
 .learn-more-link{
     color: black;
     text-decoration: none;
 }
+
+.right-arrow{
+    width: 30px;
+    animation: moveArrow 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveArrow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px); /* Move the arrow right by 10px */
+    }
+  }
+
+/* .right-arrow:hover{
+    transition: width 0.5s ;
+    width: 50px;
+} */
 
 @media only screen and (max-width: 1460px){
     .group-img1, .group-img2{
@@ -66,7 +88,7 @@
 
 @media only screen and (max-width: 768px){
     .group-img1, .group-img2{
-        width: 70%;
+        width: 90%;
         height: auto;
         border-radius: 20px;
     }
@@ -74,7 +96,7 @@
     .group-img2{
         width: 50%;
         position: absolute;
-        right: 15%;
+        right: -4%;
         bottom: -25%;
         border: 10px solid white;
     }
@@ -86,7 +108,7 @@
 
 @media only screen and (max-width: 425px){
     .group-img1, .group-img2{
-        width: 70%;
+        width: 100%;
         height: auto;
         border-radius: 20px;
     }

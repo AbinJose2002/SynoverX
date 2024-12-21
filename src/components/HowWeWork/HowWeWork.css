@@ -1,0 +1,82 @@
+.howwework-btn {
+  border: 1px solid black;
+  padding: 10px 0;
+  color: black;
+  text-decoration: none;
+  border-radius: 24px;
+}
+
+.howwework-para {
+  font-size: 1.6em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-element{
+    background-color: rgb(33, 33, 33);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.grid-element1 {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.grid-element2 {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.grid-element3 {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.grid-element4 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.grid-element5 {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+iframe{
+    border-radius: 16px;
+    width: 100%;
+    min-height: 300px;
+}
+
+.step1-num{
+    color: #fff !important;
+}
+
+.step-learn-more-link{
+    color: #fff;
+    text-decoration: none;
+}
+
+.step-right-arrow{
+    width: 30px;
+    animation: moveArrow 1s ease-in-out infinite alternate;
+}
+
+.step-learn-more{
+    border-radius: 20px;
+    border: 1px solid #fff;
+    padding: 10px 12px;
+}
+
+.step1-num.hovered {
+    color: green; /* Change to your desired hover color */
+}
+
+.step-learn-more-link.hovered {
+    color: green; /* Change to your desired hover color */
+}
