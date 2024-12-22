@@ -21,8 +21,8 @@ export default function Services() {
     }
 
     return (
-        <div>
-            <div className="service-body">
+        <div className='col-11 mx-auto'>
+            <div className="service-body ">
                 <a href="#services" className='service-btn'>OUR SERVICES</a>
                 <div className="row">
                     <div className="col-lg-8 col-sm-12 py-4">

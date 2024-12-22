@@ -57,7 +57,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(10px); /* Move the arrow right by 10px */
+      transform: translateX(7px); /* Move the arrow right by 10px */
     }
   }
 

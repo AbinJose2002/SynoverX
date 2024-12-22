@@ -4,7 +4,7 @@ import group from '../../assets/group.jpg'
 
 export default function Hero() {
     return (
-        <div>
+        <div className="col-11 mx-auto">
             <div className="row col-12 pt-5">
                 <div className="col-lg-7 col-sm-12">
                     <h1 className="hero-head">

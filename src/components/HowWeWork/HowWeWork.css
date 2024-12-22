@@ -1,82 +1,132 @@
+
+
 .howwework-btn {
-  border: 1px solid black;
-  padding: 10px 0;
-  color: black;
-  text-decoration: none;
-  border-radius: 24px;
+    border: 1px solid black;
+    padding: 10px 0;
+    color: black;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.howwework-btn:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
 }
 
 .howwework-para {
-  font-size: 1.6em;
+    font-size: 1.6em; /* Paragraph font size */
+    text-align: justify; /* Justify text */
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+/* Grid Layout */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* Default: 2 rows */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
-.grid-element{
+/* Grid Item Styles */
+.grid-element {
     background-color: rgb(33, 33, 33);
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px; /* Increased padding for better spacing */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.grid-element1 {
-  grid-row: 1;
-  grid-column: 1 / span 2;
+.grid-element:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
 }
 
-.grid-element2 {
-  grid-row: 1;
-  grid-column: 3;
-}
-
-.grid-element3 {
-  grid-row: 2;
-  grid-column: 1;
-}
-
-.grid-element4 {
-  grid-row: 2;
-  grid-column: 2;
-}
-
-.grid-element5 {
-  grid-row: 2;
-  grid-column: 3;
-}
-
-iframe{
+/* Iframe Styles */
+iframe {
     border-radius: 16px;
     width: 100%;
-    min-height: 300px;
+    height: 100%;
+    min-height: 300px; /* Minimum height for the iframe */
 }
 
-.step1-num{
-    color: #fff !important;
+/* Number Styles */
+.step1-num, .step2-num, .step3-num, .step4-num, .step5-num {
+    color: #fff; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.step-learn-more-link{
-    color: #fff;
-    text-decoration: none;
+.step1-num.hovered, .step2-num.hovered, .step3-num.hovered, .step4-num.hovered, .step5-num.hovered {
+    color: rgb(36, 169, 36) !important; /* Change to your desired hover color */
 }
 
-.step-right-arrow{
-    width: 30px;
-    animation: moveArrow 1s ease-in-out infinite alternate;
-}
-
-.step-learn-more{
+/* Link Styles */
+.step-learn-more {
+    display: inline-flex; /* Align icon and text */
+    align-items: center; /* Center vertically */
     border-radius: 20px;
     border: 1px solid #fff;
-    padding: 10px 12px;
+    padding: 10px 5px;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.step1-num.hovered {
-    color: green; /* Change to your desired hover color */
+.step-learn-more-link {
+    color: #fff; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.step-learn-more-link.hovered {
-    color: green; /* Change to your desired hover color */
+.step-learn-more.hovered {
+    background-color: rgb(36, 169, 36); /* Change to your desired hover color */
+    border-color: rgb(36, 169, 36); /* Change to your desired hover color */
+}
+
+/* Icon Styles */
+.step-right-arrow {
+    width: 30px;
+    animation: moveArrow 1s ease-in-out infinite alternate; /* Example animation */
+    margin-left: 5px; /* Space between text and icon */
+}
+
+/* Grid Area Definitions */
+.div1 {
+    grid-area: 1 / 1 / 2 / 3; /* Div 1 spans columns 1 and 2 */
+}
+.div2 {
+    grid-area: 1 / 3 / 2 / 4; /* Div 2 occupies column 3 */
+}
+.div3 {
+    grid-area: 2 / 1 / 3 / 2; /* Div 3 occupies column 1 */
+}
+.div4 {
+    grid-area: 2 / 2 / 3 / 3; /* Div 4 occupies column 2 */
+}
+.div5 {
+    grid-area: 2 / 3 / 3 / 4; /* Div 5 occupies column 3 */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .parent {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2; /* Div 1 takes the full width */
+    }
+    .div2 {
+        grid-area: 2 / 1 / 3 / 2; /* Div 2 takes the full width */
+    }
+    .div3 {
+        grid-area: 3 / 1 / 4 / 2; /* Div 3 takes the full width */
+    }
+    .div4 {
+        grid-area: 4 / 1 / 5 / 2; /* Div 4 takes the full width */
+    }
+    .div5 {
+        grid-area: 5 / 1 / 6 / 2; /* Div 5 takes the full width */
+    }
 }

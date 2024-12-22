@@ -7,7 +7,7 @@ import group1 from '../../assets/group(1).jpg'
 
 export default function About() {
     return (
-        <div className='row about col-12  py-5'>
+        <div className='row about col-12 py-5'>
             <div className="about-left col-lg-6 col-sm-12 flex-column">
                 <img src={group1} alt="" className='group-img1' />
                 <img src={group1} alt='' className='group-img2' />
