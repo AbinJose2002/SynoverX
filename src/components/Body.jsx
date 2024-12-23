@@ -6,6 +6,7 @@ import Hero from './Hero/Hero';
 import Services from './Services/Services';
 import About from './About/About';
 import HowWeWork from './HowWeWork/HowWeWork';
+import Testimonials from './Testimonials/Testimonials';
 
 // Custom hook for debouncing
 const useDebounce = (callback, delay) => {
@@ -75,6 +76,7 @@ export default function Body() {
         <Services />
         <About />
         <HowWeWork />
+        <Testimonials />  
       </div>
     </div>
   );

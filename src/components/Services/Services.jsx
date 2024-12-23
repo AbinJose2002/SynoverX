@@ -7,7 +7,7 @@ import develop from '../../assets/develop.png';
 export default function Services() {
     const handleMouseEnter = (e) => {
         const logo = e.currentTarget.querySelector('.service-item-logo');
-        logo.style.backgroundColor = 'white'
+        logo.style.backgroundColor = '#adf59a'
         const desc = e.currentTarget.querySelector('.service-item-desc');
         desc.style.color = 'black';
     }
