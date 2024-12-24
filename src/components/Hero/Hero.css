@@ -1,5 +1,6 @@
 .hero-head {
     font-size: 70px;
+    font-weight: 500;
 }
 
 .hero-para {
@@ -22,7 +23,7 @@
     font-weight: 700;
 }
 
-.hero-sub-div span {
+.plus {
     color: rgb(36, 169, 36);
 }
 
