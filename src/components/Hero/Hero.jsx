@@ -9,18 +9,18 @@ export default function Hero() {
         <div className="col-11 mx-auto">
             <div className="row col-12 pt-5">
                 <div className="col-lg-7 col-sm-12">
-                    {/* <h1 className="hero-head">
+                    <h1 className="hero-head">
                         Color Digitally With Imagination Palette
-                    </h1> */}
-                    <BlurText text="Color Digitally With Imagination Palette" className="hero-head" delay={50} />
+                    </h1>
+                    {/* <BlurText text="Color Digitally With Imagination Palette" className="hero-head" delay={50} /> */}
 
                 </div>
                 <div className="col-lg-5 col-sm-12 d-flex justify-content-center align-items-center">
-                    <BlurText text="We are digital magicians, turning ideas into compelling designs, driving change and creating real impact." className="hero-para" delay={50} />
-                    {/* <p className="hero-para">
+                    {/* <BlurText text="We are digital magicians, turning ideas into compelling designs, driving change and creating real impact." className="hero-para" delay={50} /> */}
+                    <p className="hero-para">
                         We are digital magicians, turning ideas into compelling designs,
                         driving change and creating real impact.
-                    </p> */}
+                    </p>
                 </div>
             </div>
             <div className="row col-12 mx-auto ">

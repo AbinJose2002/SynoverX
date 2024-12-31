@@ -8,11 +8,6 @@ export const BlurText = ({ text, delay = 200, className = '' }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef();
 
-  const size = {
-    fontSize: '2em',
-    textAlign: 'left'
-  }
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

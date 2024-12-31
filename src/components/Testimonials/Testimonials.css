@@ -1,0 +1,11 @@
+.testimonial-card{
+    color: #fff;
+    background-color: rgb(33, 33, 33);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.testimonial-card img{
+    border-radius: 50%;
+    height: 50px;
+}
