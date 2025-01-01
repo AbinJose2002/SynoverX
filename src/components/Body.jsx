@@ -7,6 +7,7 @@ import Services from './Services/Services';
 import About from './About/About';
 import HowWeWork from './HowWeWork/HowWeWork';
 import Testimonials from './Testimonials/Testimonials';
+import TouchWithUs from './TouchWithUs/TouchWithUs';
 
 // Custom hook for debouncing
 const useDebounce = (callback, delay) => {
@@ -77,6 +78,7 @@ export default function Body() {
         <About />
         <HowWeWork />
         <Testimonials />  
+        <TouchWithUs />
       </div>
     </div>
   );
