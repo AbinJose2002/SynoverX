@@ -14,6 +14,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 export default function Testimonials() {
+    const [size, setSize] = useState(window.innerWidth > 768 ? 2 : 1);
     const testimonial = [
         {
             name: 'Arabella Sinclair',
@@ -93,7 +94,7 @@ export default function Testimonials() {
 
             <Swiper
                 style={{ height: 'auto' }}
-                slidesPerView={2}
+                slidesPerView={size}
                 spaceBetween={30}
                 pagination={{
                     clickable: true,
