@@ -4,7 +4,7 @@ import './Testimonials.css'
 import { h1 } from 'framer-motion/client';
 import dummy from '../../assets/dummy.png'
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,7 +14,15 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 export default function Testimonials() {
-    const [size, setSize] = useState(window.innerWidth > 768 ? 2 : 1);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     const testimonial = [
         {
             name: 'Arabella Sinclair',
@@ -94,11 +102,17 @@ export default function Testimonials() {
 
             <Swiper
                 style={{ height: 'auto' }}
-                slidesPerView={size}
+                slidesPerView={1}
                 spaceBetween={30}
-                pagination={{
-                    clickable: true,
+                breakpoints={{
+                    640: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 2 }
                 }}
+                pagination={{
+                    clickable: true
+                }}
+                navigation={!isMobile}
                 modules={[Pagination]}
                 className="mySwiper"
             >
@@ -116,8 +130,8 @@ export default function Testimonials() {
                             <p style={{ textAlign: 'justify' }}>{item.message}</p>
                             <hr />
                             <div className="d-md-flex justify-content-between">
-                            <p>{item.date}</p>
-                            <p>{item.work}</p>
+                                <p>{item.date}</p>
+                                <p>{item.work}</p>
                             </div>
                         </SwiperSlide>
                     ))
