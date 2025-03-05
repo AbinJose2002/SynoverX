@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const GridItem = ({ number, title, description, isHovered }) => {
     return (
-        <div className="grid-element d-flex flex-column justify-content-between" onMouseEnter={() => isHovered(true)} onMouseLeave={() => isHovered(false)}>
+        <div className="grid-element d-flex flex-column justify-content-between popup-ani" onMouseEnter={() => isHovered(true)} onMouseLeave={() => isHovered(false)}>
             <h1 className={`step1-num ${isHovered ? 'hovered' : ''} text-white`}>{number}</h1>
             <h1 className="step1-head text-white">{title}</h1>
             <p className="step1-para text-white pb-2">{description}</p>
@@ -21,7 +21,7 @@ export default function HowWeWork() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className='row howwework pb-5 col-11 mx-auto '>
+        <div className='row howwework pb-5 col-md-11 col-sm-12 mx-auto '>
             <div className="popup-ani">
             <div className="col-12 d-flex align-items-center">
                 <a href="#about" className='howwework-btn px-3 mx-auto'>How We Work</a>
@@ -31,7 +31,7 @@ export default function HowWeWork() {
             </p>
             </div>
             <div className="parent">
-                <div className="div1 grid-element">
+                <div className="div1 grid-element popup-ani">
                     <iframe
                         src="https://www.youtube.com/embed/RIo28_boFJg"
                         title="YouTube video player"
