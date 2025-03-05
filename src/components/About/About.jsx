@@ -9,10 +9,10 @@ export default function About() {
     return (
         <div className='row about col-12 py-5'>
             <div className="about-left col-lg-6 col-sm-12 flex-column">
-                <img src={group1} alt="" className='group-img1' />
-                <img src={group1} alt='' className='group-img2' />
+                <img src={group1} alt="" className='group-img1 popup-ani' />
+                <img src={group1} alt='' className='group-img2 popup-ani' />
             </div>
-            <div className="about-right col-lg-6 col-sm-12 py-3">
+            <div className="about-right col-lg-6 col-sm-12 py-3 popup-ani">
                 <a href="#about" className='about-btn '>About Us</a>
                 <h1 className='pt-4 about-head'>Why you should choose SynoverX</h1>
                 <p className='about-para'>We proudly introduce ourselves as a digital creative agency committed to realizing our clients' vision and mission through creative, innovative, and technology-based solutions in the digital world.</p>

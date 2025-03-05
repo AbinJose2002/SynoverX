@@ -21,13 +21,15 @@ export default function HowWeWork() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className='row howwework pb-5 col-11 mx-auto'>
+        <div className='row howwework pb-5 col-11 mx-auto '>
+            <div className="popup-ani">
             <div className="col-12 d-flex align-items-center">
                 <a href="#about" className='howwework-btn px-3 mx-auto'>How We Work</a>
             </div>
             <p className='howwework-para text-center mx-auto py-5 col-lg-8 col-sm-10'>
                 We strive to create extraordinary experiences, increase brand awareness, expand target audience reach, and optimize overall business results.
             </p>
+            </div>
             <div className="parent">
                 <div className="div1 grid-element">
                     <iframe
@@ -38,7 +40,7 @@ export default function HowWeWork() {
                         allowFullScreen
                     ></iframe>
                 </div>
-                <GridItem 
+                <GridItem
                     number="01" 
                     title="Smart Digital Marketing Strategy" 
                     description="Overall, we leverage technological intelligence and understanding of customer behavior to achieve marketing goals more efficiently."

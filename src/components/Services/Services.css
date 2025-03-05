@@ -29,10 +29,13 @@
 }
 
 .service-items {
+    
     display: flex; /* Ensure it's a flex container */
     flex-wrap: wrap;
     gap: 25px; /* Adjust the gap size as needed */
   }
+
+  
   
   .service-item {
     min-height: 350px;

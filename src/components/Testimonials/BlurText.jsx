@@ -41,7 +41,7 @@ export const BlurText = ({ text, delay = 200, className = '' }) => {
   return (
     <p ref={ref} className={className} >
       {springs.map((props, index) => (
-        <animated.span key={index} style={props} className="word">
+        <animated.span key={index} style={props} className="word ">
           {words[index]}&nbsp;
         </animated.span>
       ))}
